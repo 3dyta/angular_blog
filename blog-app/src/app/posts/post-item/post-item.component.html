@@ -1,0 +1,10 @@
+      <div class="card">
+        <span *ngIf="post.postFile"><img class="card-img-top" src={{post.postFile}} alt="photo"></span>
+        <div class="card-body">
+          <a routerLink="/posts/{{post.id}}" >
+          <p class="card-title">{{post.title}}</p>
+          </a>
+          <p class="card-text"><small class="text-muted">{{post.datetime}}</small></p>
+          <p class="card-text">{{post.content}}</p>
+        </div>
+      </div>

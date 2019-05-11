@@ -1,0 +1,7 @@
+<div class="container">
+<app-post-search (postSearch)="onPostSearch($event)"></app-post-search>
+<br>
+<div class="card-group">
+<app-post-item *ngFor="let p of posts" [post]="p"></app-post-item>
+</div>
+</div>
