@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { Post } from '../posts.model';
 import { PostsService } from '../posts.service';
+
 
 @Component({
   selector: 'app-post-list',
@@ -14,7 +15,7 @@ export class PostListComponent implements OnInit {
   constructor(private ps: PostsService) { }
 
   ngOnInit() {
-    
+
   }
 
   updateList(searchValue = {}) {

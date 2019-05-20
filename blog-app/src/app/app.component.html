@@ -1,21 +1,19 @@
-<div class="container">  
-  <header class="row justify-content-end">
-      <!-- <app-post-search (postSearch)="onPostSearch($event)"></app-post-search> -->
-    <div class="col-md align-self-baseline">
-      <h1 class="justify-content-end" id="blogName">{{title}}</h1>
+<div class="container">
+  <header>
+    <div id="blogName">
+      <h4>{{title}}</h4>
     </div>
   </header>
 
-  <ul class="nav justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link active" routerLink="" routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }">Strona główna</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/create" routerLinkActive="active">Dodaj post</a>
-    </li>
-  </ul>
-</div>
+  <div id="nav"> 
+    <mat-nav-list>
+      <a mat-list-item routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"> Strona
+        główna </a>
+    </mat-nav-list>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/create" routerLinkActive="active"> Dodaj post </a>
+    </mat-nav-list>
+  </div>
 
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>

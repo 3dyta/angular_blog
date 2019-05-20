@@ -39,6 +39,7 @@ export class PostSearchComponent implements OnInit {
 
   search(){
     this.postSearch.emit(this.searchForm.value);
+    console.log(this.searchForm);
   }
 
 }

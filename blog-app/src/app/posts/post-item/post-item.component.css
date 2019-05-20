@@ -1,0 +1,20 @@
+.card {
+  margin-bottom: 15px;
+}
+
+.header-image {
+    background-size: cover;
+  }
+
+.card-header, .card-subtitle {
+      justify-content: center;
+  }
+
+#likes {
+  display: inline;
+  color: #ff4081;
+}
+
+.mat-raised-button {
+  float: right;
+}

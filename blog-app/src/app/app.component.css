@@ -11,11 +11,18 @@ header {
     font-family: 'Indie Flower', cursive;
     color: #413e3e;
     font-size: 3.5rem;
+    align-self: center;
+    text-align: right;
+    padding-right: 3%;
 }
 
-.nav  {
-    font-family: 'Indie Flower', cursive;
-    font-size: 1.5rem;
+#nav  {
+    display: flex;
+    justify-content: center
     
+}
+
+.mat-list-base {
+    display: inline-block;
 }
 

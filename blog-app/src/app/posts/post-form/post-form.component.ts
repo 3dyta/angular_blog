@@ -25,15 +25,19 @@ export class PostFormComponent implements OnInit {
   }
 
   submit(){
-    this.showErrors = true;
+    this.showErrors = false;
 
     if (this.postForm.valid) {
       const post = this.postForm.value;
       this.postService.createPost(post)
       .then(res => console.log(res))
-      .catch(err => console.log(err));
-
+      .then(() => this.postForm.reset())
+      .catch(err => this.showErrors = true);
      }
+
+    else if (this.postForm.invalid) {
+      this.showErrors = true
+    }
   }
 
 }

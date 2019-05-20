@@ -1,0 +1,16 @@
+.full-width {
+    width: 100%;
+}
+
+.mat-form-field {
+    display: block;
+}
+
+.mat-dialog-actions {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+h3 {
+    text-align: center;
+}

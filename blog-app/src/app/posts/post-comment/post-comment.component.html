@@ -1,0 +1,16 @@
+<h3 mat-dialog-title>Dodaj komentarz</h3>
+
+    <div mat-dialog-content [formGroup]="commentForm" (ngSubmit)="submitComment" novalidate>
+      <mat-form-field>
+        <input formControlName="nick" matInput class="full-width" type="text" placeholder="Podaj imię">
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <textarea formControlName="content" matInput class="full-width" placeholder="Wpisz swój komentarz"></textarea>
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button (click)="onNoClick()">Anuluj</button>
+      <button type="submit" mat-raised-button color="primary" cdkFocusInitial>Dodaj</button>
+    </div>
+ 

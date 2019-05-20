@@ -1,4 +1,40 @@
-<div class="container">
+<h4>Dodaj artykuł</h4>
+
+<form [formGroup]="postForm" (ngSubmit)="submit()" novalidate>
+  <div class="container">
+    <mat-form-field>
+      <input formControlName="title" matInput placeholder="Tytuł" />
+    </mat-form-field>
+  </div>
+
+  <p *ngIf="showErrors && postForm.get('title').errors?.required">
+    Wpisz tytuł artykułu
+  </p>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Data wpisu" formControlName="datetime" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <p *ngIf="showErrors && postForm.get('datetime').errors?.required">
+    Podaj datę
+  </p>
+
+  <app-file-input></app-file-input>
+
+  <mat-form-field>
+    <textarea formControlName="content" matInput placeholder="Treść artykułu"></textarea>
+  </mat-form-field>
+
+  <p class="alert alert-danger col-md-3" role="alert" *ngIf="showErrors && postForm.get('content').errors?.required">
+    Treść artykułu jest wymagana
+  </p>
+
+  <button type="submit" mat-raised-button color="primary">Zapisz</button>
+
+</form>
+<!-- <div class="container">
 <br>
 <h4 class="row justify-content-center">Dodaj artykuł</h4>
 <br>
@@ -13,14 +49,16 @@
 
   <div class="row">
     <div class="col-md-6">
-      <div class="form-group">
+       <div class="form-group">
           <label for="datetime">Data dodania</label>
           <input type="datetime" class="form-control" formControlName="datetime">
         </div>
         <p class="alert alert-danger col-md-6" role="alert" *ngIf="showErrors && postForm.get('datetime').errors?.required">
             Podaj datę
           </p>
-      </div>
+      </div> 
+
+
       <div class="col-md-6">
         <div class="form-group">
           <label for="postFile">Dodaj zdjęcie</label>
@@ -39,9 +77,11 @@
   
 <div class="row justify-content-center">
   <div class="col-md-3">
-<button type="submit" class="btn btn-info btn-block">Zapisz</button>
+<button type="submit" class="btn btn-info btn-block">Zapisz</button> -->
+
+<!-- <button type="submit" mat-raised-button color="primary">Zapisz</button>
+
 </div>
 </div>
 </form>
-</div>
-
+</div> -->

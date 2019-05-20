@@ -1,10 +1,23 @@
-      <div class="card">
-        <span *ngIf="post.postFile"><img class="card-img-top" src={{post.postFile}} alt="photo"></span>
-        <div class="card-body">
-          <a routerLink="/posts/{{post.id}}" >
-          <p class="card-title">{{post.title}}</p>
-          </a>
-          <p class="card-text"><small class="text-muted">{{post.datetime}}</small></p>
-          <p class="card-text">{{post.content}}</p>
-        </div>
-      </div>
+<mat-card class="card">
+  <mat-card-header class="card-header">
+    <span routerLink="/posts/{{post.id}}">
+      <mat-card-title>{{post.title}}</mat-card-title>
+    </span>
+  </mat-card-header>
+  
+  <br/>
+  <span *ngIf="post.postFile"><img mat-card-image src={{post.postFile}} alt="Photo"></span>
+  <mat-card-content>
+    <p>
+      {{post.content}}
+    </p>
+  </mat-card-content>
+  <mat-card-subtitle>{{post.datetime}}</mat-card-subtitle>
+  <mat-card-actions>
+    <button mat-icon-button color="accent" (click)="count()">
+      <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+    </button>
+    <div id="likes" >{{post.likesAmount}}</div>
+    <button mat-raised-button (click)="openDialog()">Dodaj komentarz</button>
+  </mat-card-actions>
+</mat-card>

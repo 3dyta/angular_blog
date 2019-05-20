@@ -9,16 +9,39 @@ import { PostListComponent } from './post-list/post-list.component';
 import { PostItemComponent } from './post-item/post-item.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { PostSearchComponent } from './post-search/post-search.component';
+import { MatButtonModule } from '@angular/material/button'
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule, MatNativeDateModule, MatGridListModule, MatDialogModule} from '@angular/material';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FileInputComponent } from '../file-input/file-input.component';
+import { MatCardModule } from '@angular/material/card';
+import { AboutMeComponent } from '../sidenav/about-me/about-me.component';
+import { PostCommentComponent } from './post-comment/post-comment.component';
 
 @NgModule({
-  declarations: [PostFormComponent, PostListComponent, PostItemComponent, PostDetailsComponent, PostSearchComponent],
+  declarations: [PostFormComponent, PostListComponent, 
+    PostItemComponent, PostDetailsComponent, PostSearchComponent,
+    FileInputComponent, AboutMeComponent, PostCommentComponent],
   providers: [PostsService],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCardModule,
+    MatGridListModule,
+    MatDialogModule,
   ],
-  exports: [PostFormComponent, PostListComponent, PostItemComponent, PostDetailsComponent, PostSearchComponent]
+  exports: [PostFormComponent, PostListComponent, PostItemComponent, PostDetailsComponent,
+     PostSearchComponent, AboutMeComponent, PostCommentComponent],
+     
+  entryComponents: [PostCommentComponent]
 })
 export class PostsModule { }
