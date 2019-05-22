@@ -12,17 +12,22 @@ import { PostSearchComponent } from './post-search/post-search.component';
 import { MatButtonModule } from '@angular/material/button'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule, MatNativeDateModule, MatGridListModule, MatDialogModule} from '@angular/material';
+import { MatInputModule, MatNativeDateModule, MatGridListModule, MatDialogModule, MatListModule} from '@angular/material';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FileInputComponent } from '../file-input/file-input.component';
 import { MatCardModule } from '@angular/material/card';
 import { AboutMeComponent } from '../sidenav/about-me/about-me.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
+import { PostCommentListComponent } from './post-comment-list/post-comment-list.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatBadgeModule } from '@angular/material/badge';
+import { PostCommentItemComponent } from './post-comment-item/post-comment-item.component';
+
 
 @NgModule({
   declarations: [PostFormComponent, PostListComponent, 
     PostItemComponent, PostDetailsComponent, PostSearchComponent,
-    FileInputComponent, AboutMeComponent, PostCommentComponent],
+    FileInputComponent, AboutMeComponent, PostCommentComponent, PostCommentListComponent, PostCommentItemComponent],
   providers: [PostsService],
   imports: [
     CommonModule,
@@ -38,9 +43,12 @@ import { PostCommentComponent } from './post-comment/post-comment.component';
     MatCardModule,
     MatGridListModule,
     MatDialogModule,
+    MatExpansionModule,
+    MatBadgeModule,
+    MatListModule
   ],
   exports: [PostFormComponent, PostListComponent, PostItemComponent, PostDetailsComponent,
-     PostSearchComponent, AboutMeComponent, PostCommentComponent],
+     PostSearchComponent, AboutMeComponent, PostCommentComponent, PostCommentListComponent, PostCommentItemComponent],
      
   entryComponents: [PostCommentComponent]
 })

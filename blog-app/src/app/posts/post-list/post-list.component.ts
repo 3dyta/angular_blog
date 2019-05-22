@@ -22,6 +22,8 @@ export class PostListComponent implements OnInit {
     this.ps.getPosts(searchValue)
       .then(res => this.posts = res)
       .catch(err => console.log(err));
+console.log(this.posts);
+      
   }
 
   onPostSearch(searchValue: any) {

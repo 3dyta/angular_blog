@@ -4,8 +4,8 @@
       <mat-card-title>{{post.title}}</mat-card-title>
     </span>
   </mat-card-header>
-  
-  <br/>
+
+  <br />
   <span *ngIf="post.postFile"><img mat-card-image src={{post.postFile}} alt="Photo"></span>
   <mat-card-content>
     <p>
@@ -17,7 +17,26 @@
     <button mat-icon-button color="accent" (click)="count()">
       <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
     </button>
-    <div id="likes" >{{post.likesAmount}}</div>
+    <div id="likes">{{post.likesAmount}}</div>
     <button mat-raised-button (click)="openDialog()">Dodaj komentarz</button>
   </mat-card-actions>
-</mat-card>
+      <hr/>
+
+       <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false">
+         <mat-expansion-panel-header>
+         <mat-panel-title>
+           <p>
+             <span matBadge="4" matBadgeOverlap="false">
+         Komentarze
+             </span>
+           </p> 
+         </mat-panel-title>
+         </mat-expansion-panel-header>  
+         
+            <app-post-comment-item *ngFor="let comment of post.comments" [comment]="comment">
+              </app-post-comment-item>
+
+ </mat-expansion-panel>
+</mat-accordion> 

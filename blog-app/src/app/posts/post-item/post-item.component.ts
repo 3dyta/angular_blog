@@ -14,6 +14,8 @@ export class PostItemComponent {
 
   @Input() post: Post;
   @Input() comment: PostComment;
+  private postId: number;
+
 
   constructor(private route: ActivatedRoute,
      private postsService: PostsService, 
@@ -22,14 +24,21 @@ export class PostItemComponent {
   }
 
   //modal window
-  openDialog(): void {
+  openDialog(id: number): void {
+    console.log('id');
+    console.log(id);
     const dialogRef = this.dialog.open(PostCommentComponent, {
       width: '600px',
       height: '400px'
     });
-
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
+      console.log(result);
+      if (this.post.comments == null) {
+        this.post.comments = Array<PostComment>();
+      }
+      this.post.comments.push(result);
+      this.postsService.updatePost(this.post);
       this.comment = result;
     });
   }

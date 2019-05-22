@@ -4,14 +4,15 @@ export interface Post {
     content: string,
     datetime: Date,
     likesAmount: number,
-    comments: Array<PostComment>
+    comments: PostComment[]
 }
 
 export interface PostComment {
+    postId: number,
     id?: number,
     nick: string,
     content: string,
-    datetime?: Date,
+    datetime: Date,
 }
 
 export enum Sort {

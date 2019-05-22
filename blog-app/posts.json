@@ -6,7 +6,21 @@
       "postFile": "https://images.unsplash.com/photo-1513442542250-854d436a73f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2058&q=80",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mollis aliquam ut porttitor leo. Enim nunc faucibus a pellentesque sit amet porttitor. Risus quis varius quam quisque id diam. Risus nec feugiat in fermentum. Id volutpat lacus laoreet non curabitur gravida arcu ac tortor. Donec enim diam vulputate ut. Sapien pellentesque habitant morbi tristique senectus et netus. Facilisis mauris sit amet massa vitae. Elementum nisi quis eleifend quam adipiscing. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Penatibus et magnis dis parturient. Nec feugiat in fermentum posuere urna nec tincidunt praesent semper. Tincidunt praesent semper feugiat nibh sed pulvinar. Blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada. Duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Tempus urna et pharetra pharetra massa. Ut tellus elementum sagittis vitae. Scelerisque felis imperdiet proin fermentum. Ut tellus elementum sagittis vitae et leo duis ut diam. Id leo in vitae turpis. Sed turpis tincidunt id aliquet risus feugiat. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque. Sit amet massa vitae tortor condimentum lacinia quis vel. Pellentesque sit amet porttitor eget. Duis at consectetur lorem donec. Eget mauris pharetra et ultrices neque ornare. At auctor urna nunc id cursus metus aliquam. Ac tortor dignissim convallis aenean et tortor at risus. Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Morbi tristique senectus et netus. Morbi tristique senectus et netus et malesuada fames ac turpis. In hac habitasse platea dictumst quisque sagittis purus sit. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Id leo in vitae turpis. Sed turpis tincidunt id aliquet risus feugiat. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque. Sit amet massa vitae tortor condimentum lacinia quis vel. Pellentesque sit amet porttitor eget. Duis at consectetur lorem donec. Eget mauris pharetra et ultrices neque ornare. At auctor urna nunc id cursus metus aliquam. Ac tortor dignissim convallis aenean et tortor at risus. Integer malesuada nunc vel risus commodo viverra maecenas accumsan. Morbi tristique senectus et netus. Morbi tristique senectus et netus et malesuada fames ac turpis. In hac habitasse platea dictumst quisque sagittis purus sit. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque.",
       "datetime": "06.03.2019",
-      "likesAmount": 25
+      "likesAmount": 25,
+      "comments": [
+        {
+          "nick": "Edyta",
+          "content": "testetdglsfgmdlkgmfdkvf",
+          "dateTime": "22/5/2019",
+          "postId": ""
+        },
+        {
+          "nick": "Damian",
+          "content": "fdgdf",
+          "dateTime": "22/5/2019",
+          "postId": ""
+        }
+      ]
     },
     {
       "id": 2,

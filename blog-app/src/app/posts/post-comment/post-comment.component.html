@@ -8,9 +8,14 @@
       <mat-form-field>
         <textarea formControlName="content" matInput class="full-width" placeholder="Wpisz swój komentarz"></textarea>
       </mat-form-field>
+      <mat-form-field>
+        <small>
+          <input type="text" formControlName="dateTime" matInput readonly>
+        </small>
+        </mat-form-field>
     </div>
     <div mat-dialog-actions>
       <button mat-raised-button (click)="onNoClick()">Anuluj</button>
-      <button type="submit" mat-raised-button color="primary" cdkFocusInitial>Dodaj</button>
+      <button type="submit" mat-raised-button color="primary" cdkFocusInitial (click)="save()">Dodaj</button>
     </div>
  

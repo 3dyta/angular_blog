@@ -40,6 +40,10 @@ export class PostsService {
     }
 
     addComment(id, nick, content): any {
+        console.log('addComment');
+        console.log(id);
+        console.log(nick);
+        console.log(content);
         let post = this.getPost(id);
         let newComment: PostComment;
         newComment.nick = nick;
@@ -48,5 +52,6 @@ export class PostsService {
         post.comments.put(newComment);
         this.updatePost(post);
     }
+
 
 }
