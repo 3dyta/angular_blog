@@ -1,9 +1,24 @@
 #aboutMe-card {
     max-width: 400px;
+    min-height: 350px;
   }
   
 #aboutMe-image {
     background-image: url('https://images.unsplash.com/photo-1549525484-9e9c35d8cb54?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80');
     background-size: cover;
   }
+
+  mat-card-content {
+    margin: 15px;
+  }
+
+.socialMedia {
+  display: inline-block;
+  margin: 15px;
+  
+}
+
+#socialCard{
+  float: right;
+}
   

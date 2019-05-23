@@ -9,7 +9,7 @@
   <span *ngIf="post.postFile"><img mat-card-image src={{post.postFile}} alt="Photo"></span>
   <mat-card-content>
     <p>
-      {{post.content}}
+      {{post.content.substring(0, post.content.length >= 500 ? 500 : null)}}
     </p>
   </mat-card-content>
   <mat-card-subtitle>{{post.datetime}}</mat-card-subtitle>
@@ -28,7 +28,7 @@
          <mat-expansion-panel-header>
          <mat-panel-title>
            <p>
-             <span matBadge="4" matBadgeOverlap="false">
+             <span matBadge="{{post.comments != null ? post.comments?.length : 0}}" matBadgeOverlap="false">
          Komentarze
              </span>
            </p> 

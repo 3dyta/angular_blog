@@ -22,7 +22,11 @@ import { PostCommentListComponent } from './post-comment-list/post-comment-list.
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatBadgeModule } from '@angular/material/badge';
 import { PostCommentItemComponent } from './post-comment-item/post-comment-item.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFacebookSquare, faTwitterSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
+library.add(faFacebookSquare, faTwitterSquare, faInstagram)
 
 @NgModule({
   declarations: [PostFormComponent, PostListComponent, 
@@ -45,7 +49,9 @@ import { PostCommentItemComponent } from './post-comment-item/post-comment-item.
     MatDialogModule,
     MatExpansionModule,
     MatBadgeModule,
-    MatListModule
+    MatListModule,
+    FontAwesomeModule
+    
   ],
   exports: [PostFormComponent, PostListComponent, PostItemComponent, PostDetailsComponent,
      PostSearchComponent, AboutMeComponent, PostCommentComponent, PostCommentListComponent, PostCommentItemComponent],

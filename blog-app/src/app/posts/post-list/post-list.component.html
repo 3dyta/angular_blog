@@ -1,8 +1,10 @@
 <app-post-search (postSearch)="onPostSearch($event)"></app-post-search>
 
 <section id="listView">
-    <div id="postList">
-        <app-post-item *ngFor="let p of posts" [post]="p"></app-post-item>
+    <div id="mainPage">
+        <div id="postList">
+            <app-post-item *ngFor="let p of posts" [post]="p"></app-post-item>
+        </div>
     </div>
     <div id="side">
         <app-about-me></app-about-me>
