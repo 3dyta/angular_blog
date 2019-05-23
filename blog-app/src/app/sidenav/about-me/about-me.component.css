@@ -1,6 +1,10 @@
 #aboutMe-card {
     max-width: 400px;
     min-height: 350px;
+    position: -webkit-sticky;
+    position: sticky;
+    right: 0;
+    top: 0;
   }
   
 #aboutMe-image {

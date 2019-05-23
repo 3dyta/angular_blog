@@ -14,13 +14,27 @@
   </mat-card-content>
   <mat-card-subtitle>{{post.datetime}}</mat-card-subtitle>
   <mat-card-actions>
-    <button mat-icon-button color="accent" (click)="count()">
-      <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-    </button>
-    <div id="likes">{{post.likesAmount}}</div>
-    <button mat-raised-button (click)="openDialog()">Dodaj komentarz</button>
+     
+     <div class="row">
+      <div class="col-2" >
+        <button mat-icon-button color="accent" (click)="count()">
+          <mat-icon aria-label="Example icon-button with a heart icon" style="vertical-align: top">favorite</mat-icon>
+        </button>
+        <div id="likes" style="vertical-align: top">{{post.likesAmount}}</div>
+      </div>
+      <div class="col-2">
+        <div id="comments">
+          <span matBadge="{{post.comments != null ? post.comments?.length : 0}}" matBadgeOverlap="false">
+            <mat-icon>comment</mat-icon>
+          </span>
+        </div>
+      </div>
+      <div class="col-8" >
+        <a routerLink="/posts/{{post.id}}" mat-raised-button style="vertical-align: top">Więcej</a>
+      </div>
+    </div>
   </mat-card-actions>
-      <hr/>
+  <!-- <hr/>
 
        <mat-accordion>
           <mat-expansion-panel (opened)="panelOpenState = true"
@@ -39,4 +53,4 @@
               </app-post-comment-item>
 
  </mat-expansion-panel>
-</mat-accordion> 
+</mat-accordion>  -->
