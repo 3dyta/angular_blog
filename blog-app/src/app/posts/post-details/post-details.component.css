@@ -10,13 +10,13 @@
   width: 50%;
 }
 
-.mat-raised-button {
-  float: right;
-}
-
 #likes {
   display: inline;
   color: #ff4081;
+}
+
+.mat-raised-button {
+  float: right;
 }
 
 mat-card-header {
@@ -26,4 +26,12 @@ mat-card-header {
 
 mat-card-content {
     text-align: justify;
-  }
+}
+
+#deletePost {
+  float: right;
+}
+
+.bottom-aligned {
+  vertical-align: bottom;
+}

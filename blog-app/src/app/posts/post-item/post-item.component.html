@@ -1,27 +1,27 @@
-
 <mat-card class="card">
-  <mat-card-header class="card-header">
+  <mat-card-header>
     <span routerLink="/posts/{{post.id}}">
       <mat-card-title>{{post.title}}</mat-card-title>
     </span>
   </mat-card-header>
 
-  <br />
   <span *ngIf="post.postFile"><img mat-card-image src={{post.postFile}} alt="Photo"></span>
   <mat-card-content>
+    <!-- show only 500 signs from the text-->
     <p>
       {{post.content.substring(0, post.content.length >= 500 ? 500 : null)}}
     </p>
   </mat-card-content>
+  <!-- show only yyyy-mm-dd -->
   <mat-card-subtitle>{{post.datetime.substring(0, 10)}}</mat-card-subtitle>
   <mat-card-actions>
-     
-     <div class="row">
-      <div class="col-2" >
+
+    <div class="row">
+      <div class="col-2">
         <button mat-icon-button color="accent" (click)="count()">
-          <mat-icon aria-label="Example icon-button with a heart icon" style="vertical-align: top">favorite</mat-icon>
+          <mat-icon aria-label="Example icon-button with a heart icon" class="top-aligned">favorite</mat-icon>
         </button>
-        <div id="likes" style="vertical-align: top">{{post.likesAmount}}</div>
+        <div id="likes" class="top-aligned">{{post.likesAmount}}</div>
       </div>
       <div class="col-2">
         <div id="comments">
@@ -30,10 +30,8 @@
           </span>
         </div>
       </div>
-      <div class="col-8" >
-        <a routerLink="/posts/{{post.id}}" mat-raised-button style="vertical-align: top">Więcej</a>
+      <div class="col-8">
+        <a routerLink="/posts/{{post.id}}" mat-raised-button class="top-aligned">Więcej</a>
       </div>
     </div>
   </mat-card-actions>
-
-  

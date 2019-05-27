@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: '', component: PostListComponent},
   { path: 'create', component: PostFormComponent},
   { path: 'posts', component: PostListComponent},
-  { path: 'posts/:id', component: PostDetailsComponent}
+  { path: 'posts/:id', component: PostDetailsComponent},
+  { path: '404', component: PostListComponent }
 ];
 
 @NgModule({

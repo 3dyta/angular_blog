@@ -1,24 +1,21 @@
-.card {
+mat-card {
   margin-bottom: 15px;
 }
 
-.header-image {
-    background-size: cover;
-  }
+mat-card-header, mat-card-subtitle {
+  justify-content: center;
+}
 
-.card-header, .card-subtitle {
-      justify-content: center;
-  }
+mat-card-content {
+  text-align: justify;
+}
 
-  mat-card-content {
-    text-align: justify;
-  }
-
-  img {
-    height: 350px;
-    width: 400px;
-    object-fit: cover;
-  }
+img {
+  height: 350px;
+  width: 400px;
+  object-fit: cover;
+  padding: 0 10px;
+}
 
 #likes {
   display: inline;
@@ -31,20 +28,24 @@
   height: 40px;
 }
 
-.col-2, .col-8{
+.col-2,
+.col-8 {
   display: inline-block;
   height: 40px;
-} 
+}
 
 .col-2 {
   width: 20%;
 }
 
 .col-8 {
-  width:60%
+  width: 60%
 }
 
 .mat-raised-button {
   float: right;
 }
 
+.top-aligned {
+  vertical-align: top;
+}

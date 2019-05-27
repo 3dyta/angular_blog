@@ -4,6 +4,7 @@ import { Component, Input, OnInit, OnChanges } from '@angular/core';
     selector: 'blog-title',
     templateUrl: './title.component.html'
 })
+
 export class TitleComponent implements OnInit, OnChanges {
     @Input() text: string = 'Blog';
     

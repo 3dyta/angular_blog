@@ -14,7 +14,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule, MatNativeDateModule, MatGridListModule, MatDialogModule, MatListModule} from '@angular/material';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { FileInputComponent } from '../file-input/file-input.component';
 import { MatCardModule } from '@angular/material/card';
 import { AboutMeComponent } from '../sidenav/about-me/about-me.component';
 import { PostCommentComponent } from './post-comment/post-comment.component';
@@ -25,13 +24,14 @@ import { PostCommentItemComponent } from './post-comment-item/post-comment-item.
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFacebookSquare, faTwitterSquare, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { MatTooltipModule } from '@angular/material/tooltip'
 
 library.add(faFacebookSquare, faTwitterSquare, faInstagram)
 
 @NgModule({
   declarations: [PostFormComponent, PostListComponent, 
     PostItemComponent, PostDetailsComponent, PostSearchComponent,
-    FileInputComponent, AboutMeComponent, PostCommentComponent, PostCommentListComponent, PostCommentItemComponent],
+    AboutMeComponent, PostCommentComponent, PostCommentListComponent, PostCommentItemComponent],
   providers: [PostsService],
   imports: [
     CommonModule,
@@ -50,7 +50,8 @@ library.add(faFacebookSquare, faTwitterSquare, faInstagram)
     MatExpansionModule,
     MatBadgeModule,
     MatListModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatTooltipModule
     
   ],
   exports: [PostFormComponent, PostListComponent, PostItemComponent, PostDetailsComponent,

@@ -7,8 +7,8 @@ import { Sort, Order } from '../posts.model';
   templateUrl: './post-search.component.html',
   styleUrls: ['./post-search.component.css']
 })
-export class PostSearchComponent implements OnInit {
 
+export class PostSearchComponent implements OnInit {
 
   @Output() postSearch: EventEmitter<string> = new EventEmitter();
 
@@ -39,8 +39,6 @@ export class PostSearchComponent implements OnInit {
 
   search(){
     this.postSearch.emit(this.searchForm.value);
-    console.log(this.searchForm);
   }
 
 }
-

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Post } from './posts.model';
 import { PostComment } from './posts.model';
+import { Observable } from 'rxjs';
 
 @Injectable()
 
@@ -37,22 +38,19 @@ export class PostsService {
         let likePost = this.getPost(id);
         likePost.likesAmount++;
         this.updatePost(likePost);
-        console.log(likePost);
     }
 
     addComment(id, nick, content): any {
-        console.log('addComment');
-        console.log(id);
-        console.log(nick);
-        console.log(content);
         let post = this.getPost(id);
         let newComment: PostComment;
         newComment.nick = nick;
         newComment.content = content;
-
         post.comments.put(newComment);
         this.updatePost(post);
     }
 
-
+    deletePost(id: number): Observable<{}> {
+        const url = `${this.server}/${id}`;
+        return this.http.delete(url)
+    }
 }

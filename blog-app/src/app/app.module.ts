@@ -34,3 +34,4 @@ library.add(faFacebookSquare, faTwitterSquare, faInstagram)
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

@@ -1,9 +1,7 @@
 import { Component, Input, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { PostComment, Post } from '../posts.model';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
-import { PostsService } from '../posts.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-post-comment',
@@ -19,8 +17,6 @@ export class PostCommentComponent implements OnInit {
   commentForm: FormGroup;
 
   constructor(
-    private route: ActivatedRoute,
-    private postsService: PostsService,
     public dialogRef: MatDialogRef<PostCommentComponent>,
     @Inject(MAT_DIALOG_DATA) public data: PostComment,
     private fb: FormBuilder) { }
@@ -33,10 +29,7 @@ export class PostCommentComponent implements OnInit {
     })
   }
 
-  save(id) {
-    //let post = this.postsService.getPost(postId);
-     console.log(this.commentForm.value)
-     //this.postsService.addComment(this.commentForm.value.postId, this.commentForm.value.nick, this.commentForm.value.content);
+  save() {
      this.dialogRef.close(this.commentForm.value);
    }
 
@@ -47,7 +40,6 @@ export class PostCommentComponent implements OnInit {
     let month = m + 1;
     let day = date.getDate();
     let today = `${day}/${month}/${year}`
-    console.log(today);
 
     return today;
   }
