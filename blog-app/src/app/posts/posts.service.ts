@@ -12,6 +12,7 @@ export class PostsService {
     constructor(private http: HttpClient) { }
 
     createPost(post: Post): any {
+        post.likesAmount = 0;
         return this.http.post(this.server, post).toPromise();
     }
 

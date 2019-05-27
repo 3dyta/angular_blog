@@ -21,10 +21,15 @@
     Podaj datę
   </p>
 
-  <app-file-input></app-file-input>
+  <mat-form-field>
+      <input formControlName="postFile" matInput placeholder="Podaj adres url pliku" />
+    </mat-form-field>
+
+
+  <!-- <app-file-input></app-file-input> -->
 
   <mat-form-field>
-    <textarea formControlName="content" matInput placeholder="Treść artykułu"></textarea>
+    <textarea formControlName="content" matInput placeholder="Treść artykułu" cdkTextareaAutosize></textarea>
   </mat-form-field>
 
   <p class="alert alert-danger col-md-3" role="alert" *ngIf="showErrors && postForm.get('content').errors?.required">

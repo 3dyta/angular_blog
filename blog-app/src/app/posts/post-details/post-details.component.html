@@ -1,7 +1,3 @@
-<!-- <div class="container">
-<app-post-item [post]="post"></app-post-item>
-</div> -->
-
 <mat-card class="card">
     <mat-card-header class="card-header">
         <span routerLink="/posts/{{post.id}}">
@@ -16,15 +12,22 @@
             {{post.content}}
         </p>
     </mat-card-content>
-    <mat-card-subtitle>{{post.datetime}}</mat-card-subtitle>
+    <mat-card-subtitle>{{post.datetime != undefined ? post.datetime.substring(0, 10) : ''}}</mat-card-subtitle>
     <mat-card-actions>
-        <button mat-icon-button color="accent" (click)="count()">
-            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
-        </button>
-        <div id="likes">{{post.likesAmount}}</div>
-        <button mat-raised-button (click)="openDialog()">Dodaj komentarz</button>
+        <div class="row">
+            <div class="col-6">
+                <button mat-icon-button color="accent" (click)="count()">
+                    <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+                </button>
+                <div id="likes">{{post.likesAmount}}</div>
+            </div>
+            <div class="col-6">
+                <button mat-raised-button (click)="openDialog()">Dodaj komentarz</button>
+            </div>
+        </div>
     </mat-card-actions>
-    <hr />
+
+
 
     <mat-accordion>
         <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
@@ -37,9 +40,8 @@
                     </p>
                 </mat-panel-title>
             </mat-expansion-panel-header>
-
+           
             <app-post-comment-item *ngFor="let comment of post.comments" [comment]="comment">
             </app-post-comment-item>
-
         </mat-expansion-panel>
     </mat-accordion>

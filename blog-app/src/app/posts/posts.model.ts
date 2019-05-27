@@ -2,6 +2,7 @@ export interface Post {
     id?: number,
     title: string,
     content: string,
+    postFile: string,
     datetime: Date,
     likesAmount: number,
     comments: PostComment[]

@@ -10,6 +10,16 @@
       justify-content: center;
   }
 
+  mat-card-content {
+    text-align: justify;
+  }
+
+  img {
+    height: 350px;
+    width: 400px;
+    object-fit: cover;
+  }
+
 #likes {
   display: inline;
   color: #ff4081;
@@ -27,13 +37,14 @@
 } 
 
 .col-2 {
-  width: 10%;
+  width: 20%;
 }
 
 .col-8 {
-  width:79%
+  width:60%
 }
 
 .mat-raised-button {
   float: right;
 }
+

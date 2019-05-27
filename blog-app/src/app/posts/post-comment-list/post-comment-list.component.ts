@@ -9,12 +9,12 @@ import { PostComment, Post } from '../posts.model';
 })
 export class PostCommentListComponent implements OnInit {
 
-  @Input() comment: PostComment;
+  @Input() c: PostComment;
   @Input() post: Post;
 
   panelOpenState = false;
   
-  // comment: PostComment = {} as PostComment
+  comment: PostComment = {} as PostComment
 
   constructor () {}
 

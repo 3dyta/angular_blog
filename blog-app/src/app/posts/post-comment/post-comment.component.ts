@@ -17,7 +17,6 @@ export class PostCommentComponent implements OnInit {
   @Input() post: Post;
 
   commentForm: FormGroup;
-  // actualDate: number;
 
   constructor(
     private route: ActivatedRoute,
@@ -30,18 +29,16 @@ export class PostCommentComponent implements OnInit {
     this.commentForm = this.fb.group({
       nick: ["", Validators.required],
       content: ["", Validators.required],
-      dateTime: this.actualDate(),
-      postId: ""
+      dateTime: this.actualDate()
     })
   }
 
-
   save(id) {
-   //let post = this.postsService.getPost(postId);
-    console.log(this.commentForm.value)
-    //this.postsService.addComment(this.commentForm.value.postId, this.commentForm.value.nick, this.commentForm.value.content);
-    this.dialogRef.close(this.commentForm.value);
-  }
+    //let post = this.postsService.getPost(postId);
+     console.log(this.commentForm.value)
+     //this.postsService.addComment(this.commentForm.value.postId, this.commentForm.value.nick, this.commentForm.value.content);
+     this.dialogRef.close(this.commentForm.value);
+   }
 
   actualDate() {
     let date = new Date();

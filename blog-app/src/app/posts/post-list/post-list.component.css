@@ -16,5 +16,11 @@
     grid-template-columns: 70% 33%;
     grid-template-areas: 
     " main sidenav"
+}
+
+app-post-item {
+    display: inline-block;
+    width: 50%;
+    height: 300px;
 
 }
